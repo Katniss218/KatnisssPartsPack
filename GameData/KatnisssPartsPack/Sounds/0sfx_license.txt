@@ -1,0 +1,4 @@
+CC BY-NC-SA 4.0
+
+sound_liq4_enhanced, sound_liq8_enhanced, and sound_liq8_spin are mixed and layered using KW Rocketry sounds
+ntr_loop_medium, and ntr_loop_medium_geiger are mixed and layered using Ensou's sounds
