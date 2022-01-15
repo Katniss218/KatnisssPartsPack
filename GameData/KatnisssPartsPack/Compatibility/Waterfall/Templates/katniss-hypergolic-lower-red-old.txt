@@ -10,7 +10,7 @@ EFFECTTEMPLATE
 			path = Waterfall/FX/fx-cylinder
 			positionOffset = 0,0,2
 			rotationOffset = -90,0,0
-			scaleOffset = 1.01999998,32,1.01999998
+			scaleOffset = 1.01999998,48,1.01999998
 			MATERIAL
 			{
 				transform = Cylinder
@@ -51,7 +51,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _FadeIn
-					value = 0.75
+					value = 0.5
 				}
 				FLOAT
 				{
@@ -76,7 +76,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _SpeedX
-					value = 4
+					value = 0
 				}
 				FLOAT
 				{
@@ -122,8 +122,8 @@ EFFECTTEMPLATE
 			floatName = _Brightness
 			floatCurve
 			{
-				key = 0.15 0 0 0
-				key = 1 0.5 2 0
+				key = 0.1 0 0 0
+				key = 0.9 0.4 1 0
 			}
 		}
 		FLOATMODIFIER
@@ -139,7 +139,7 @@ EFFECTTEMPLATE
 			floatCurve
 			{
 				key = 0 6 0 0
-				key = 0.7 1 0 0
+				key = 0.7 2 0 0
 			}
 		}
 		FLOATMODIFIER
@@ -187,7 +187,7 @@ EFFECTTEMPLATE
 			floatName = _ExpandBounded
 			floatCurve
 			{
-				key = 0 10 0 0
+				key = 0 6 0 0
 				key = 1 0.5 0 0
 			}
 		}
@@ -204,7 +204,8 @@ EFFECTTEMPLATE
 			floatCurve
 			{
 				key = 0 2 0 0
-				key = 1 4 0 0
+				key = 0.5 3 0 0
+				key = 1 6 0 0
 			}
 		}
 	}
@@ -226,7 +227,7 @@ EFFECTTEMPLATE
 				TEXTURE
 				{
 					textureSlotName = _MainTex
-					texturePath = KatnisssPartsPack/Assets/WaterfallFX/fx-katniss-noise-1-blurred
+					texturePath = KatnisssPartsPack/Assets/WaterfallFX/fx-katniss-noise-5-blurred
 					textureScale = 1,1
 					textureOffset = 0,0
 				}
@@ -243,7 +244,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _ExpandLinear
-					value = -5.5
+					value = -10
 				}
 				FLOAT
 				{
@@ -263,7 +264,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _TintFalloff
-					value = 0.899999976
+					value = 0
 				}
 				FLOAT
 				{
@@ -283,12 +284,12 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _Noise
-					value = 4
+					value = 6
 				}
 				FLOAT
 				{
 					floatName = _TileY
-					value = 2
+					value = 1
 				}
 				FLOAT
 				{
@@ -349,8 +350,8 @@ EFFECTTEMPLATE
 			floatName = _Brightness
 			floatCurve
 			{
-				key = 0.5 1 0 0
-				key = 1 1.5 0 0
+				key = 0.5 2 0 0
+				key = 1 0.25 0 0
 			}
 		}
 		FLOATMODIFIER
@@ -365,7 +366,7 @@ EFFECTTEMPLATE
 			floatName = _Falloff
 			floatCurve
 			{
-				key = 0 70 0 -50
+				key = 0 60 0 -50
 				key = 0.8 30 0 0
 			}
 		}
@@ -381,8 +382,9 @@ EFFECTTEMPLATE
 			floatName = _ExpandBounded
 			floatCurve
 			{
-				key = 0 20 0 -40
-				key = 0.7 3 0 0
+				key = 0 40 0 -40
+				key = 0.6 7 0 0
+				key = 1 5 0 0
 			}
 		}
 		FLOATMODIFIER
@@ -420,7 +422,7 @@ EFFECTTEMPLATE
 				TEXTURE
 				{
 					textureSlotName = _MainTex
-					texturePath = Waterfall/FX/fx-noise-2
+					texturePath = KatnisssPartsPack/Assets/WaterfallFX/fx-katniss-noise-1-blurred
 					textureScale = 1,1
 					textureOffset = 0,0
 				}
@@ -437,7 +439,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _ExpandLinear
-					value = -5.5
+					value = -5.55437708
 				}
 				FLOAT
 				{
@@ -472,17 +474,17 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _SpeedY
-					value = 70
+					value = 45
 				}
 				FLOAT
 				{
 					floatName = _Noise
-					value = 3.07583284
+					value = 5
 				}
 				FLOAT
 				{
 					floatName = _TileY
-					value = 0.200000003
+					value = 0.5
 				}
 				FLOAT
 				{
@@ -512,7 +514,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _ExpandSquare
-					value = 3.5
+					value = 0.672395587
 				}
 				FLOAT
 				{
@@ -522,13 +524,39 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _FadeIn
-					value = 0
+					value = 0.0250000004
 				}
 				FLOAT
 				{
 					floatName = _FadeOut
-					value = 0.298889071
+					value = 0.200000003
 				}
+			}
+		}
+		SCALEMODIFIER
+		{
+			name = aScale
+			controllerName = atmosphereDepth
+			transformName = Cylinder
+			combinationType = MULTIPLY
+			useRandomness = False
+			randomnessController = random
+			randomnessScale = 1
+			xCurve
+			{
+				key = 0 1 0 0
+				key = 1 1 0 0
+			}
+			yCurve
+			{
+				key = 0 1.25 0 0
+				key = 0.5 2 0 0
+				key = 1 1 0 0
+			}
+			zCurve
+			{
+				key = 0 1 0 0
+				key = 1 1 0 0
 			}
 		}
 		FLOATMODIFIER
@@ -560,8 +588,25 @@ EFFECTTEMPLATE
 			floatName = _ExpandBounded
 			floatCurve
 			{
-				key = 0 32 0 -25
-				key = 0.85 4 0 0
+				key = 0 40 0 -25
+				key = 0.7 6 -5 0
+				key = 1 5 -5 0
+			}
+		}
+		FLOATMODIFIER
+		{
+			name = aExpLinear
+			controllerName = atmosphereDepth
+			transformName = Cylinder
+			combinationType = REPLACE
+			useRandomness = False
+			randomnessController = random
+			randomnessScale = 1
+			floatName = _ExpandLinear
+			floatCurve
+			{
+				key = 0 0 0 -10
+				key = 0.5 -5 0 0
 			}
 		}
 		FLOATMODIFIER
@@ -576,8 +621,8 @@ EFFECTTEMPLATE
 			floatName = _Fresnel
 			floatCurve
 			{
-				key = 0 0.5 0 0
-				key = 1 1.8 0 0
+				key = 0.5 0.4 0 0
+				key = 0.75 1.8 0 0
 			}
 		}
 		FLOATMODIFIER
@@ -592,8 +637,8 @@ EFFECTTEMPLATE
 			floatName = _Falloff
 			floatCurve
 			{
-				key = 0 30 0 -50
-				key = 1 1 0 0
+				key = 0 30 0 -90
+				key = 0.6 5 0 0
 			}
 		}
 		FLOATMODIFIER
@@ -610,32 +655,6 @@ EFFECTTEMPLATE
 			{
 				key = 0 0 0 0
 				key = 1 2 0 0
-			}
-		}
-		SCALEMODIFIER
-		{
-			name = aScale
-			controllerName = atmosphereDepth
-			transformName = Cylinder
-			combinationType = MULTIPLY
-			useRandomness = False
-			randomnessController = random
-			randomnessScale = 1
-			xCurve
-			{
-				key = 0 1 0 0
-				key = 1 1 0 0
-			}
-			yCurve
-			{
-				key = 0 1.25 0 0
-				key = 0.5 2 0 0
-				key = 1 1 0 0
-			}
-			zCurve
-			{
-				key = 0 1 0 0
-				key = 1 1 0 0
 			}
 		}
 	}
@@ -853,9 +872,9 @@ EFFECTTEMPLATE
 		MODEL
 		{
 			path = Waterfall/FX/fx-cylinder
-			positionOffset = 0,0,0
+			positionOffset = 0,0,-0.200000003
 			rotationOffset = -90,0,0
-			scaleOffset = 0.75,4,0.75
+			scaleOffset = 0.75,3.5,0.75
 			MATERIAL
 			{
 				transform = Cylinder
@@ -864,7 +883,7 @@ EFFECTTEMPLATE
 				TEXTURE
 				{
 					textureSlotName = _MainTex
-					texturePath = Waterfall/FX/fx-noise-1
+					texturePath = KatnisssPartsPack/Assets/WaterfallFX/fx-katniss-noise-1-blurred
 					textureScale = 1,1
 					textureOffset = 0,0
 				}
@@ -916,7 +935,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _SpeedY
-					value = 40
+					value = 90
 				}
 				FLOAT
 				{
@@ -926,12 +945,12 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _TileX
-					value = 7
+					value = 1
 				}
 				FLOAT
 				{
 					floatName = _TileY
-					value = 2
+					value = 0.25
 				}
 				FLOAT
 				{
@@ -946,7 +965,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _FresnelInvert
-					value = 0.150000006
+					value = 0.0500000007
 				}
 				FLOAT
 				{
@@ -1038,7 +1057,23 @@ EFFECTTEMPLATE
 			floatCurve
 			{
 				key = 0.2 0 0 0
-				key = 1 3 0 0
+				key = 1 2 0 0
+			}
+		}
+		FLOATMODIFIER
+		{
+			name = aExpBounded
+			controllerName = atmosphereDepth
+			transformName = Cylinder
+			combinationType = REPLACE
+			useRandomness = False
+			randomnessController = random
+			randomnessScale = 1
+			floatName = _ExpandBounded
+			floatCurve
+			{
+				key = 0 3 0 0
+				key = 0.9 1.2 0 0
 			}
 		}
 		FLOATMODIFIER
@@ -1060,18 +1095,18 @@ EFFECTTEMPLATE
 		}
 		FLOATMODIFIER
 		{
-			name = aExpLinear
+			name = newModifier
 			controllerName = atmosphereDepth
 			transformName = Cylinder
 			combinationType = REPLACE
 			useRandomness = False
 			randomnessController = random
 			randomnessScale = 1
-			floatName = _ExpandLinear
+			floatName = _Falloff
 			floatCurve
 			{
-				key = 0 1 0 0
-				key = 0.8 -1 0 0
+				key = 0 2 0 0
+				key = 1 0.6 0 0
 			}
 		}
 	}
@@ -1093,19 +1128,19 @@ EFFECTTEMPLATE
 				TEXTURE
 				{
 					textureSlotName = _MainTex
-					texturePath = Waterfall/FX/fx-noise-1
+					texturePath = KatnisssPartsPack/Assets/WaterfallFX/fx-katniss-noise-1-blurred
 					textureScale = 1,1
 					textureOffset = 0,0
 				}
 				COLOR
 				{
 					colorName = _StartTint
-					colorValue = 0.279051036,0.140859053,0.179809541,1
+					colorValue = 0.313725501,0.175003096,0.232954115,1
 				}
 				COLOR
 				{
 					colorName = _EndTint
-					colorValue = 0.453295678,0.257103205,0.339684248,1
+					colorValue = 0.449999988,0.25999999,0.340000004,1
 				}
 				FLOAT
 				{
@@ -1145,7 +1180,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _SpeedY
-					value = 40
+					value = 90
 				}
 				FLOAT
 				{
@@ -1155,12 +1190,12 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _TileX
-					value = 7
+					value = 1
 				}
 				FLOAT
 				{
 					floatName = _TileY
-					value = 2
+					value = 0.25
 				}
 				FLOAT
 				{
@@ -1175,7 +1210,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _FresnelInvert
-					value = 0.150000006
+					value = 0.0500000007
 				}
 				FLOAT
 				{
@@ -1200,7 +1235,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _TintFalloff
-					value = 5
+					value = 1
 				}
 			}
 		}
@@ -1221,8 +1256,33 @@ EFFECTTEMPLATE
 			}
 			zCurve
 			{
-				key = 0 0 0 0
+				key = 0 1.35 0 0
 				key = 1 2.7 0 0
+			}
+		}
+		POSITIONMODIFIER
+		{
+			name = aPosition
+			controllerName = atmosphereDepth
+			transformName = Cylinder
+			combinationType = ADD
+			useRandomness = False
+			randomnessController = random
+			randomnessScale = 1
+			xCurve
+			{
+				key = 0 0 0 0
+				key = 1 0 0 0
+			}
+			yCurve
+			{
+				key = 0 -0.5 0 0
+				key = 1 0 0 0
+			}
+			zCurve
+			{
+				key = 0 0 0 0
+				key = 1 0 0 0
 			}
 		}
 		SCALEMODIFIER
@@ -1287,8 +1347,8 @@ EFFECTTEMPLATE
 			floatName = _Brightness
 			floatCurve
 			{
-				key = 0.2 0 0 0
-				key = 1 2.5 0 0
+				key = 0.35 0 0 0
+				key = 1 1.5 3 0
 			}
 		}
 		FLOATMODIFIER
@@ -1310,43 +1370,18 @@ EFFECTTEMPLATE
 		}
 		FLOATMODIFIER
 		{
-			name = aExpLin
+			name = aExpOffset
 			controllerName = atmosphereDepth
 			transformName = Cylinder
 			combinationType = REPLACE
 			useRandomness = False
 			randomnessController = random
 			randomnessScale = 1
-			floatName = _ExpandLinear
+			floatName = _ExpandOffset
 			floatCurve
 			{
-				key = 0.25 0.5 0 -4
-				key = 0.8 -1 0 0
-			}
-		}
-		POSITIONMODIFIER
-		{
-			name = aPosition
-			controllerName = atmosphereDepth
-			transformName = Cylinder
-			combinationType = ADD
-			useRandomness = False
-			randomnessController = random
-			randomnessScale = 1
-			xCurve
-			{
-				key = 0 0 0 0
-				key = 1 0 0 0
-			}
-			yCurve
-			{
-				key = 0 -0.5 0 0
-				key = 1 0 0 0
-			}
-			zCurve
-			{
-				key = 0 0 0 0
-				key = 1 0 0 0
+				key = 0.5 0 0 -1
+				key = 1 -0.4 0 0
 			}
 		}
 	}
@@ -1375,12 +1410,12 @@ EFFECTTEMPLATE
 				COLOR
 				{
 					colorName = _StartTint
-					colorValue = 0.180759028,0.237014443,0.400000006,0
+					colorValue = 0.449999988,0.25999999,0.340000004,1
 				}
 				COLOR
 				{
 					colorName = _EndTint
-					colorValue = 0.580392182,0.337254912,0.337254912,0
+					colorValue = 0.449999988,0.25999999,0.340000004,1
 				}
 				FLOAT
 				{
@@ -1390,7 +1425,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _Falloff
-					value = 0.25
+					value = 1
 				}
 				FLOAT
 				{
@@ -1420,7 +1455,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _FadeOut
-					value = 0.5
+					value = 0.25
 				}
 				FLOAT
 				{
@@ -1518,39 +1553,6 @@ EFFECTTEMPLATE
 			{
 			}
 		}
-		FLOATMODIFIER
-		{
-			name = aBrightness
-			controllerName = atmosphereDepth
-			transformName = Cylinder
-			combinationType = REPLACE
-			useRandomness = False
-			randomnessController = random
-			randomnessScale = 1
-			floatName = _Brightness
-			floatCurve
-			{
-				key = 0.35 0 0 4
-				key = 0.75 1.5 0 0
-			}
-		}
-		FLOATMODIFIER
-		{
-			name = tBrightness
-			controllerName = throttle
-			transformName = Cylinder
-			combinationType = MULTIPLY
-			useRandomness = False
-			randomnessController = random
-			randomnessScale = 1
-			floatName = _Brightness
-			floatCurve
-			{
-				key = 0 0 0 0
-				key = 0.1 0.2 0 0
-				key = 1 1 0 0
-			}
-		}
 		POSITIONMODIFIER
 		{
 			name = aPosition
@@ -1578,6 +1580,39 @@ EFFECTTEMPLATE
 		}
 		FLOATMODIFIER
 		{
+			name = aBrightness
+			controllerName = atmosphereDepth
+			transformName = Cylinder
+			combinationType = REPLACE
+			useRandomness = False
+			randomnessController = random
+			randomnessScale = 1
+			floatName = _Brightness
+			floatCurve
+			{
+				key = 0.45 0 0 4
+				key = 0.75 0.8 0 0
+			}
+		}
+		FLOATMODIFIER
+		{
+			name = tBrightness
+			controllerName = throttle
+			transformName = Cylinder
+			combinationType = MULTIPLY
+			useRandomness = False
+			randomnessController = random
+			randomnessScale = 1
+			floatName = _Brightness
+			floatCurve
+			{
+				key = 0 0 0 0
+				key = 0.1 0.2 0 0
+				key = 1 1 0 0
+			}
+		}
+		FLOATMODIFIER
+		{
 			name = aExpOffset
 			controllerName = atmosphereDepth
 			transformName = Cylinder
@@ -1589,7 +1624,7 @@ EFFECTTEMPLATE
 			floatCurve
 			{
 				key = 0 1 0 -4
-				key = 1 -0.8 0 0
+				key = 0.1 -0.9 0 0
 			}
 		}
 	}
@@ -1611,19 +1646,19 @@ EFFECTTEMPLATE
 				TEXTURE
 				{
 					textureSlotName = _MainTex
-					texturePath = Waterfall/FX/fx-noise-1
+					texturePath = KatnisssPartsPack/Assets/WaterfallFX/fx-katniss-noise-1-blurred
 					textureScale = 1,1
 					textureOffset = 0,0
 				}
 				COLOR
 				{
 					colorName = _StartTint
-					colorValue = 0.279051036,0.140859053,0.179809541,1
+					colorValue = 0.449999988,0.25999999,0.340000004,1
 				}
 				COLOR
 				{
 					colorName = _EndTint
-					colorValue = 0.420455635,0.248893201,0.200114071,1
+					colorValue = 0.519999981,0.25,0.280000001,1
 				}
 				FLOAT
 				{
@@ -1663,7 +1698,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _SpeedY
-					value = 40
+					value = 90
 				}
 				FLOAT
 				{
@@ -1673,12 +1708,12 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _TileX
-					value = 7
+					value = 1
 				}
 				FLOAT
 				{
 					floatName = _TileY
-					value = 2
+					value = 0.25
 				}
 				FLOAT
 				{
@@ -1693,7 +1728,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _FresnelInvert
-					value = 0.150000006
+					value = 0.0500000007
 				}
 				FLOAT
 				{
@@ -1718,7 +1753,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _TintFalloff
-					value = 5
+					value = 1
 				}
 			}
 		}
@@ -1739,8 +1774,33 @@ EFFECTTEMPLATE
 			}
 			zCurve
 			{
-				key = 0 0 0 0
+				key = 0 2.85 0 0
 				key = 1 5.7 0 0
+			}
+		}
+		POSITIONMODIFIER
+		{
+			name = aPosition
+			controllerName = atmosphereDepth
+			transformName = Cylinder
+			combinationType = ADD
+			useRandomness = False
+			randomnessController = random
+			randomnessScale = 1
+			xCurve
+			{
+				key = 0 0 0 0
+				key = 1 0 0 0
+			}
+			yCurve
+			{
+				key = 0 -1 0 0
+				key = 1 0 0 0
+			}
+			zCurve
+			{
+				key = 0 0 0 0
+				key = 1 0 0 0
 			}
 		}
 		SCALEMODIFIER
@@ -1805,8 +1865,8 @@ EFFECTTEMPLATE
 			floatName = _Brightness
 			floatCurve
 			{
-				key = 0.3 0 0 0
-				key = 1 2 0 0
+				key = 0.4 0 0 0
+				key = 1 1.25 3 0
 			}
 		}
 		FLOATMODIFIER
@@ -1828,22 +1888,6 @@ EFFECTTEMPLATE
 		}
 		FLOATMODIFIER
 		{
-			name = aExpLinear
-			controllerName = atmosphereDepth
-			transformName = Cylinder
-			combinationType = REPLACE
-			useRandomness = False
-			randomnessController = random
-			randomnessScale = 1
-			floatName = _ExpandLinear
-			floatCurve
-			{
-				key = 0.25 1 0 -4
-				key = 0.8 -1 0 0
-			}
-		}
-		FLOATMODIFIER
-		{
 			name = aExpOffset
 			controllerName = atmosphereDepth
 			transformName = Cylinder
@@ -1854,33 +1898,8 @@ EFFECTTEMPLATE
 			floatName = _ExpandOffset
 			floatCurve
 			{
-				key = 0 1 0 0
-				key = 0.8 -0.45 0 0
-			}
-		}
-		POSITIONMODIFIER
-		{
-			name = aPosition
-			controllerName = atmosphereDepth
-			transformName = Cylinder
-			combinationType = ADD
-			useRandomness = False
-			randomnessController = random
-			randomnessScale = 1
-			xCurve
-			{
-				key = 0 0 0 0
-				key = 1 0 0 0
-			}
-			yCurve
-			{
-				key = 0 -1 0 0
-				key = 1 0 0 0
-			}
-			zCurve
-			{
-				key = 0 0 0 0
-				key = 1 0 0 0
+				key = 0.5 0 0 0
+				key = 1 -0.4 0 0
 			}
 		}
 	}
@@ -1909,12 +1928,12 @@ EFFECTTEMPLATE
 				COLOR
 				{
 					colorName = _StartTint
-					colorValue = 0.180759028,0.237014443,0.400000006,0
+					colorValue = 0.519999981,0.25,0.280000001,1
 				}
 				COLOR
 				{
 					colorName = _EndTint
-					colorValue = 0.580392182,0.337254912,0.312624842,0
+					colorValue = 0.519999981,0.25,0.280000001,1
 				}
 				FLOAT
 				{
@@ -1924,7 +1943,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _Falloff
-					value = 0.25
+					value = 1
 				}
 				FLOAT
 				{
@@ -1954,7 +1973,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _FadeOut
-					value = 0.5
+					value = 0.25
 				}
 				FLOAT
 				{
@@ -2052,39 +2071,6 @@ EFFECTTEMPLATE
 			{
 			}
 		}
-		FLOATMODIFIER
-		{
-			name = aBrightness
-			controllerName = atmosphereDepth
-			transformName = Cylinder
-			combinationType = REPLACE
-			useRandomness = False
-			randomnessController = random
-			randomnessScale = 1
-			floatName = _Brightness
-			floatCurve
-			{
-				key = 0.45 0 0 4
-				key = 0.8 1 0 0
-			}
-		}
-		FLOATMODIFIER
-		{
-			name = tBrightness
-			controllerName = throttle
-			transformName = Cylinder
-			combinationType = MULTIPLY
-			useRandomness = False
-			randomnessController = random
-			randomnessScale = 1
-			floatName = _Brightness
-			floatCurve
-			{
-				key = 0 0 0 0
-				key = 0.1 0.2 0 0
-				key = 1 1 0 0
-			}
-		}
 		POSITIONMODIFIER
 		{
 			name = aPosition
@@ -2112,6 +2098,39 @@ EFFECTTEMPLATE
 		}
 		FLOATMODIFIER
 		{
+			name = aBrightness
+			controllerName = atmosphereDepth
+			transformName = Cylinder
+			combinationType = REPLACE
+			useRandomness = False
+			randomnessController = random
+			randomnessScale = 1
+			floatName = _Brightness
+			floatCurve
+			{
+				key = 0.5 0 0 4
+				key = 0.8 0.7 0 0
+			}
+		}
+		FLOATMODIFIER
+		{
+			name = tBrightness
+			controllerName = throttle
+			transformName = Cylinder
+			combinationType = MULTIPLY
+			useRandomness = False
+			randomnessController = random
+			randomnessScale = 1
+			floatName = _Brightness
+			floatCurve
+			{
+				key = 0 0 0 0
+				key = 0.1 0.2 0 0
+				key = 1 1 0 0
+			}
+		}
+		FLOATMODIFIER
+		{
 			name = aExpOffset
 			controllerName = atmosphereDepth
 			transformName = Cylinder
@@ -2123,7 +2142,7 @@ EFFECTTEMPLATE
 			floatCurve
 			{
 				key = 0 1 0 0
-				key = 1 -0.8 0 0
+				key = 0.1 -0.9 0 0
 			}
 		}
 	}
@@ -2145,19 +2164,19 @@ EFFECTTEMPLATE
 				TEXTURE
 				{
 					textureSlotName = _MainTex
-					texturePath = Waterfall/FX/fx-noise-1
+					texturePath = KatnisssPartsPack/Assets/WaterfallFX/fx-katniss-noise-1-blurred
 					textureScale = 1,1
 					textureOffset = 0,0
 				}
 				COLOR
 				{
 					colorName = _StartTint
-					colorValue = 0.279051036,0.140859053,0.179809541,1
+					colorValue = 0.519999981,0.25,0.280000001,1
 				}
 				COLOR
 				{
 					colorName = _EndTint
-					colorValue = 0.404035628,0.166793078,0.0441238321,1
+					colorValue = 0.600000024,0.25,0.219999999,1
 				}
 				FLOAT
 				{
@@ -2197,7 +2216,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _SpeedY
-					value = 40
+					value = 90
 				}
 				FLOAT
 				{
@@ -2207,12 +2226,12 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _TileX
-					value = 7
+					value = 1
 				}
 				FLOAT
 				{
 					floatName = _TileY
-					value = 2
+					value = 0.25
 				}
 				FLOAT
 				{
@@ -2227,7 +2246,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _FresnelInvert
-					value = 0.150000006
+					value = 0.0500000007
 				}
 				FLOAT
 				{
@@ -2252,7 +2271,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _TintFalloff
-					value = 5
+					value = 1
 				}
 			}
 		}
@@ -2273,8 +2292,33 @@ EFFECTTEMPLATE
 			}
 			zCurve
 			{
-				key = 0 0 0 0
+				key = 0 4.65 0 0
 				key = 1 9.3 0 0
+			}
+		}
+		POSITIONMODIFIER
+		{
+			name = aPosition
+			controllerName = atmosphereDepth
+			transformName = Cylinder
+			combinationType = ADD
+			useRandomness = False
+			randomnessController = random
+			randomnessScale = 1
+			xCurve
+			{
+				key = 0 0 0 0
+				key = 1 0 0 0
+			}
+			yCurve
+			{
+				key = 0 -1.5 0 0
+				key = 1 0 0 0
+			}
+			zCurve
+			{
+				key = 0 0 0 0
+				key = 1 0 0 0
 			}
 		}
 		SCALEMODIFIER
@@ -2339,8 +2383,8 @@ EFFECTTEMPLATE
 			floatName = _Brightness
 			floatCurve
 			{
-				key = 0.35 0 0 0
-				key = 1 1.5 0 0
+				key = 0.45 0 0 0
+				key = 1 1 3 0
 			}
 		}
 		FLOATMODIFIER
@@ -2362,47 +2406,6 @@ EFFECTTEMPLATE
 		}
 		FLOATMODIFIER
 		{
-			name = aExpLinear
-			controllerName = atmosphereDepth
-			transformName = Cylinder
-			combinationType = REPLACE
-			useRandomness = False
-			randomnessController = random
-			randomnessScale = 1
-			floatName = _ExpandLinear
-			floatCurve
-			{
-				key = 0.25 2 0 -4
-				key = 0.8 -1 0 0
-			}
-		}
-		POSITIONMODIFIER
-		{
-			name = aPosition
-			controllerName = atmosphereDepth
-			transformName = Cylinder
-			combinationType = ADD
-			useRandomness = False
-			randomnessController = random
-			randomnessScale = 1
-			xCurve
-			{
-				key = 0 0 0 0
-				key = 1 0 0 0
-			}
-			yCurve
-			{
-				key = 0 -1.5 0 0
-				key = 1 0 0 0
-			}
-			zCurve
-			{
-				key = 0 0 0 0
-				key = 1 0 0 0
-			}
-		}
-		FLOATMODIFIER
-		{
 			name = aExpOffset
 			controllerName = atmosphereDepth
 			transformName = Cylinder
@@ -2413,8 +2416,8 @@ EFFECTTEMPLATE
 			floatName = _ExpandOffset
 			floatCurve
 			{
-				key = 0 1 0 0
-				key = 0.8 -0.4 0 0
+				key = 0.5 0 0 0
+				key = 1 -0.4 0 0
 			}
 		}
 	}
@@ -2443,22 +2446,22 @@ EFFECTTEMPLATE
 				COLOR
 				{
 					colorName = _StartTint
-					colorValue = 0.180759028,0.237014443,0.400000006,0
+					colorValue = 0.600000024,0.25,0.219999999,1
 				}
 				COLOR
 				{
 					colorName = _EndTint
-					colorValue = 0.580392182,0.337254912,0.312624842,0
+					colorValue = 0.600000024,0.25,0.219999999,1
 				}
 				FLOAT
 				{
 					floatName = _TintFalloff
-					value = 1.75
+					value = 1.32857823
 				}
 				FLOAT
 				{
 					floatName = _Falloff
-					value = 0.25
+					value = 1
 				}
 				FLOAT
 				{
@@ -2488,7 +2491,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _FadeOut
-					value = 0.5
+					value = 0.25
 				}
 				FLOAT
 				{
@@ -2586,39 +2589,6 @@ EFFECTTEMPLATE
 			{
 			}
 		}
-		FLOATMODIFIER
-		{
-			name = aBrightness
-			controllerName = atmosphereDepth
-			transformName = Cylinder
-			combinationType = REPLACE
-			useRandomness = False
-			randomnessController = random
-			randomnessScale = 1
-			floatName = _Brightness
-			floatCurve
-			{
-				key = 0.55 0 0 4
-				key = 0.85 0.7 0 0
-			}
-		}
-		FLOATMODIFIER
-		{
-			name = tBrightness
-			controllerName = throttle
-			transformName = Cylinder
-			combinationType = MULTIPLY
-			useRandomness = False
-			randomnessController = random
-			randomnessScale = 1
-			floatName = _Brightness
-			floatCurve
-			{
-				key = 0 0 0 0
-				key = 0.1 0.2 0 0
-				key = 1 1 0 0
-			}
-		}
 		POSITIONMODIFIER
 		{
 			name = aPosition
@@ -2646,6 +2616,39 @@ EFFECTTEMPLATE
 		}
 		FLOATMODIFIER
 		{
+			name = aBrightness
+			controllerName = atmosphereDepth
+			transformName = Cylinder
+			combinationType = REPLACE
+			useRandomness = False
+			randomnessController = random
+			randomnessScale = 1
+			floatName = _Brightness
+			floatCurve
+			{
+				key = 0.6 0 0 4
+				key = 0.85 0.5 0 0
+			}
+		}
+		FLOATMODIFIER
+		{
+			name = tBrightness
+			controllerName = throttle
+			transformName = Cylinder
+			combinationType = MULTIPLY
+			useRandomness = False
+			randomnessController = random
+			randomnessScale = 1
+			floatName = _Brightness
+			floatCurve
+			{
+				key = 0 0 0 0
+				key = 0.1 0.2 0 0
+				key = 1 1 0 0
+			}
+		}
+		FLOATMODIFIER
+		{
 			name = aExpOffset
 			controllerName = atmosphereDepth
 			transformName = Cylinder
@@ -2657,7 +2660,7 @@ EFFECTTEMPLATE
 			floatCurve
 			{
 				key = 0 1 0 0
-				key = 1 -0.8 0 0
+				key = 0.1 -0.9 0 0
 			}
 		}
 	}
@@ -2679,19 +2682,19 @@ EFFECTTEMPLATE
 				TEXTURE
 				{
 					textureSlotName = _MainTex
-					texturePath = Waterfall/FX/fx-noise-1
+					texturePath = KatnisssPartsPack/Assets/WaterfallFX/fx-katniss-noise-1-blurred
 					textureScale = 1,1
 					textureOffset = 0,0
 				}
 				COLOR
 				{
 					colorName = _StartTint
-					colorValue = 0.279051036,0.140859053,0.179809541,1
+					colorValue = 0.600000024,0.25,0.219999999,1
 				}
 				COLOR
 				{
 					colorName = _EndTint
-					colorValue = 0.732436121,0.232473195,0.0985201448,1
+					colorValue = 0.670000017,0.239999995,0.159999996,1
 				}
 				FLOAT
 				{
@@ -2731,7 +2734,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _SpeedY
-					value = 40
+					value = 60
 				}
 				FLOAT
 				{
@@ -2741,12 +2744,12 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _TileX
-					value = 7
+					value = 1
 				}
 				FLOAT
 				{
 					floatName = _TileY
-					value = 2
+					value = 0.25
 				}
 				FLOAT
 				{
@@ -2786,7 +2789,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _TintFalloff
-					value = 5
+					value = 1
 				}
 			}
 		}
@@ -2807,8 +2810,33 @@ EFFECTTEMPLATE
 			}
 			zCurve
 			{
+				key = 0 6.5 0 0
+				key = 1 13 0 0
+			}
+		}
+		POSITIONMODIFIER
+		{
+			name = aPosition
+			controllerName = atmosphereDepth
+			transformName = Cylinder
+			combinationType = ADD
+			useRandomness = False
+			randomnessController = random
+			randomnessScale = 1
+			xCurve
+			{
 				key = 0 0 0 0
-				key = 1 13.5 0 0
+				key = 1 0 0 0
+			}
+			yCurve
+			{
+				key = 0 -1.5 0 0
+				key = 1 0 0 0
+			}
+			zCurve
+			{
+				key = 0 0 0 0
+				key = 1 0 0 0
 			}
 		}
 		SCALEMODIFIER
@@ -2874,7 +2902,7 @@ EFFECTTEMPLATE
 			floatCurve
 			{
 				key = 0.5 0 0 0
-				key = 1 1 3 0
+				key = 1 0.75 3 0
 			}
 		}
 		FLOATMODIFIER
@@ -2894,31 +2922,6 @@ EFFECTTEMPLATE
 				key = 1 0.7 0 0
 			}
 		}
-		POSITIONMODIFIER
-		{
-			name = aPosition
-			controllerName = atmosphereDepth
-			transformName = Cylinder
-			combinationType = ADD
-			useRandomness = False
-			randomnessController = random
-			randomnessScale = 1
-			xCurve
-			{
-				key = 0 0 0 0
-				key = 1 0 0 0
-			}
-			yCurve
-			{
-				key = 0 -1.5 0 0
-				key = 1 0 0 0
-			}
-			zCurve
-			{
-				key = 0 0 0 0
-				key = 1 0 0 0
-			}
-		}
 	}
 	EFFECT
 	{
@@ -2929,7 +2932,7 @@ EFFECTTEMPLATE
 			path = Waterfall/FX/fx-cylinder
 			positionOffset = 0,0,0
 			rotationOffset = -90,0,0
-			scaleOffset = 0.75,2.5,0.75
+			scaleOffset = 0.75,2,0.75
 			MATERIAL
 			{
 				transform = Cylinder
@@ -2945,12 +2948,12 @@ EFFECTTEMPLATE
 				COLOR
 				{
 					colorName = _StartTint
-					colorValue = 0.180759028,0.237014443,0.400000006,0
+					colorValue = 0.670000017,0.239999995,0.159999996,1
 				}
 				COLOR
 				{
 					colorName = _EndTint
-					colorValue = 0.580392182,0.337254912,0.312624842,0
+					colorValue = 0.670000017,0.239999995,0.159999996,1
 				}
 				FLOAT
 				{
@@ -2960,7 +2963,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _Falloff
-					value = 0.25
+					value = 1
 				}
 				FLOAT
 				{
@@ -2990,7 +2993,7 @@ EFFECTTEMPLATE
 				FLOAT
 				{
 					floatName = _FadeOut
-					value = 0.5
+					value = 0.25
 				}
 				FLOAT
 				{
@@ -3060,7 +3063,7 @@ EFFECTTEMPLATE
 			yCurve
 			{
 				key = 0 -0.4 0 0
-				key = 1 -5 0 0
+				key = 1 -6.2 0 0
 			}
 			zCurve
 			{
@@ -3088,6 +3091,31 @@ EFFECTTEMPLATE
 			{
 			}
 		}
+		POSITIONMODIFIER
+		{
+			name = aPosition
+			controllerName = atmosphereDepth
+			transformName = Cylinder
+			combinationType = MULTIPLY
+			useRandomness = False
+			randomnessController = random
+			randomnessScale = 1
+			xCurve
+			{
+				key = 0 1 0 0
+				key = 1 1 0 0
+			}
+			yCurve
+			{
+				key = 0 2.3 0 0
+				key = 1 1 0 0
+			}
+			zCurve
+			{
+				key = 0 1 0 0
+				key = 1 1 0 0
+			}
+		}
 		FLOATMODIFIER
 		{
 			name = aBrightness
@@ -3101,7 +3129,7 @@ EFFECTTEMPLATE
 			floatCurve
 			{
 				key = 0.65 0 0 4
-				key = 0.95 0.5 0 0
+				key = 0.95 0.4 0 0
 			}
 		}
 		FLOATMODIFIER
@@ -3121,31 +3149,6 @@ EFFECTTEMPLATE
 				key = 1 1 0 0
 			}
 		}
-		POSITIONMODIFIER
-		{
-			name = aPosition
-			controllerName = atmosphereDepth
-			transformName = Cylinder
-			combinationType = MULTIPLY
-			useRandomness = False
-			randomnessController = random
-			randomnessScale = 1
-			xCurve
-			{
-				key = 0 1 0 0
-				key = 1 1 0 0
-			}
-			yCurve
-			{
-				key = 0 2 0 0
-				key = 1 1 0 0
-			}
-			zCurve
-			{
-				key = 0 1 0 0
-				key = 1 1 0 0
-			}
-		}
 		FLOATMODIFIER
 		{
 			name = aExpOffset
@@ -3159,7 +3162,7 @@ EFFECTTEMPLATE
 			floatCurve
 			{
 				key = 0 1 0 0
-				key = 1 -0.8 0 0
+				key = 0.1 -0.9 0 0
 			}
 		}
 	}
