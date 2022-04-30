@@ -19,4 +19,5 @@ The official repository for Katniss's Parts Pack for KSP RSS/RO.
 
 ## Pictures
 ![Imgur](https://i.imgur.com/OgFIABo.png)
-![Imgur](https://i.imgur.com/pcO3695.png)
+![Imgur](https://i.imgur.com/TmIyuFc.png)
+![Imgur](https://i.imgur.com/K8UNGuB.png)
