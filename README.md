@@ -13,9 +13,9 @@ The official repository for Katniss's Parts Pack for KSP RSS/RO.
 ### Soft Dependencies:
 **Soft meaning *parts of the mod* will not work correctly without them.**
 
-* SSTU - for engines
+* SSTU - for some engines (some work both with and without it)
 * SimpleAdjustableFairings - for fairings
-* StagedAnimation - for Mobile Launcher(s), Launch Umbilical Tower(s), and Mobile Service Structure(s)
+* https://github.com/Katniss218/StagedAnimation - for Mobile Launcher(s), Launch Umbilical Tower(s), and Mobile Service Structure(s)
 
 ## Pictures
 ![Imgur](https://i.imgur.com/OgFIABo.png)
