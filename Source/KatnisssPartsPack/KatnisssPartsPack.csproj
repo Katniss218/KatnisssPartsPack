@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{446E2470-00DC-4835-B62D-9DB8A7D41F4A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KatnisssPartsPack</RootNamespace>
+    <AssemblyName>KatnisssPartsPack</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\GameData\KatnisssPartsPack\Plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\GameData\KatnisssPartsPack\Plugins\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="PartModules\FXModuleMODELLookatConstraint.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="KSPAssets, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\KSPAssets.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <Private>False</Private>
+      <HintPath>D:\Kerbal Space Program\1.12.5-rss\KSP_x64_Data\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <PostBuildEvent>
+      <!-- @echo $(Targetname) -->
+      <!-- @echo ... -->
+      <!-- @echo set lpath vars from LocalDev storage... -->
+      <!-- set /p KSP_DIR=&lt;"$(ProjectDir)LocalDev\ksp_dir.txt" -->
+      <!-- set /p PDB2MDB_EXE=&lt;"$(ProjectDir)LocalDev\pdb2mdb_exe.txt" -->
+      <!-- set /p ZA_DIR=&lt;"$(ProjectDir)LocalDev\7za_dir.txt" -->
+      <!-- set /p DIST_DIR=&lt;"$(ProjectDir)LocalDev\dist_dir.txt" -->
+      <!-- @echo distributing $(Targetname) files... -->
+      <!-- copy /Y "$(TargetPath)" "$(ProjectDir)Distribution\GameData\CameraTools\Plugins\" -->
+      <!-- if $(ConfigurationName) == Debug ( -->
+      <!-- @echo building $(Targetname).dll.mdb file... -->
+      <!-- cd "$(TargetDir)" -->
+      <!-- copy /Y "$(TargetDir)$(Targetname).pdb" "%25KSP_DIR%25\GameData\CameraTools\Plugins\" -->
+      <!-- ) -->
+      <!-- @echo packaging files... -->
+      <!-- if exist "%25DIST_DIR%25\CameraTools*.zip" del "%25DIST_DIR%25\CameraTools*.zip" -->
+      <!-- call "%25ZA_DIR%25\7za.exe" a -tzip -r  "%25DIST_DIR%25\CameraTools.@(VersionNumber)_%25DATE:~4,2%25%25DATE:~7,2%25%25DATE:~10,4%25.zip" "$(ProjectDir)Distribution\*.*" -->
+      <!-- @echo Deploy $(Targetname) Distribution files to test env:  %25KSP_DIR%25\GameData... -->
+      <!-- @echo copying:"$(SolutionDir)\CameraTools\Distribution\GameData" to "%25KSP_DIR%25\GameData"  -->
+      <!-- xcopy /E /Y "$(SolutionDir)\CameraTools\Distribution\GameData" "%25KSP_DIR%25\GameData" -->
+      <!-- if $(ConfigurationName) == Debug ( -->
+      <!-- copy /Y "$(TargetDir)$(Targetname).pdb" "%25KSP_DIR%25\GameData\CameraTools\Plugins\" -->
+      <!-- ) -->
+      <!-- @echo Build/deploy complete! -->
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

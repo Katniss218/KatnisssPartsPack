@@ -1,0 +1,6 @@
+E:\GIT\KatnisssPartsPack\GameData\KatnisssPartsPack\Plugins\KatnisssPartsPack.dll
+E:\GIT\KatnisssPartsPack\GameData\KatnisssPartsPack\Plugins\KatnisssPartsPack.pdb
+E:\GIT\KatnisssPartsPack\Source\KatnisssPartsPack\obj\Debug\KatnisssPartsPack.csproj.CoreCompileInputs.cache
+E:\GIT\KatnisssPartsPack\Source\KatnisssPartsPack\obj\Debug\KatnisssPartsPack.dll
+E:\GIT\KatnisssPartsPack\Source\KatnisssPartsPack\obj\Debug\KatnisssPartsPack.pdb
+E:\GIT\KatnisssPartsPack\Source\KatnisssPartsPack\obj\Debug\KatnisssPartsPack.csproj.AssemblyReference.cache
